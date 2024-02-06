@@ -4,9 +4,11 @@ import AppHeader from './components/AppHeader.vue';
 </script>
 
 <template>
-  <div class="app-wrapper bg-gradient-to-b from-green-100 to-white h-screen">
-    <AppHeader />
+  <div class="app-wrapper flex justify-center bg-cyan-50">
+    <div class="grow bg-gradient-to-b from-green-200 to-white h-screen max-w-[1280px] shadow border">
+      <AppHeader />
 
-    <RouterView />
+      <RouterView />
+    </div>
   </div>
 </template>
