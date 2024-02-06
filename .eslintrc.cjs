@@ -1,5 +1,5 @@
 /* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
+require('@rushstack/eslint-patch/modern-module-resolution');
 
 module.exports = {
   root: true,
@@ -19,7 +19,25 @@ module.exports = {
       ]
     }
   ],
+  rules: {
+    '@typescript-eslint/semi': [
+      'error'
+    ],
+    indent: [
+      'warn',
+      2,
+      {
+        'SwitchCase': 1,
+        'flatTernaryExpressions': true
+      }
+    ],
+    'linebreak-style': [
+      'error',
+      'unix'
+    ],
+    noUselessEscape: 0
+  },
   parserOptions: {
     ecmaVersion: 'latest'
   }
-}
+};
