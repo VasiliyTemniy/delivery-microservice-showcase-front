@@ -1,10 +1,10 @@
 import { apiBaseUrl } from './apiBaseUrl';
-import axios from 'axios';
+import axios, { type AxiosResponse } from 'axios';
 
 
-const calculateDeliveryMeta = async (): Promise<JSON> => {
+const calculateDeliveryMeta = async (): Promise<AxiosResponse<JSON>> => {
 
-  const { data: response } = await axios.get<JSON>(
+  return await axios.get<JSON>(
     `${apiBaseUrl}/delivery-meta`,
     {
       params:[
@@ -17,8 +17,6 @@ const calculateDeliveryMeta = async (): Promise<JSON> => {
       ]
     }
   );
-
-  return response;
 };
 
 
