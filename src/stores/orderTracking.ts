@@ -1,4 +1,4 @@
-import type { APIResponse, OrderTracking } from '@/services/types';
+import type { APIResponse, OrderTracking, SpringPage } from '@/services/types';
 import { ref, computed } from 'vue';
 import { defineStore } from 'pinia';
 import { api } from '@/services';
@@ -89,7 +89,15 @@ export const useOrderTrackingStore = defineStore('orderTracking', () => {
     try {
       const { status, data } = await api.orderTracking.getPageByOrderId(orderId, page.value, size.value);
       if (status === 200) {
-        initOrderTrackings(data as unknown as OrderTracking[]); // caution! validate here!
+
+        const parsedData = data as unknown as SpringPage<OrderTracking>; // caution! validate here!
+
+        const orderTrackings = parsedData.content;
+
+        setPage(parsedData.pageable.pageNumber);
+        setSize(parsedData.pageable.pageSize);
+
+        initOrderTrackings(orderTrackings); 
         return {
           success: true,
           content: null,
@@ -139,7 +147,15 @@ export const useOrderTrackingStore = defineStore('orderTracking', () => {
     try {
       const { status, data } = await api.orderTracking.getPageByCarrierId(carrierId, page.value, size.value);
       if (status === 200) {
-        initOrderTrackings(data as unknown as OrderTracking[]); // caution! validate here!
+
+        const parsedData = data as unknown as SpringPage<OrderTracking>; // caution! validate here!
+
+        const orderTrackings = parsedData.content;
+
+        setPage(parsedData.pageable.pageNumber);
+        setSize(parsedData.pageable.pageSize);
+
+        initOrderTrackings(orderTrackings); 
         return {
           success: true,
           content: null,
