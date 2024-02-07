@@ -4,7 +4,7 @@ import { defineStore } from 'pinia';
 import { api } from '@/services';
 import { AxiosError } from 'axios';
 
-export const useOrderTrackingStore = defineStore('deliveryMeta', () => {
+export const useDeliveryMetaStore = defineStore('deliveryMeta', () => {
 
   const deliveryMeta = ref<DeliveryMeta>();
 
