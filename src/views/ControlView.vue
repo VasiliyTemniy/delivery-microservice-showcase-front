@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import ApiTestControl from '@/components/ApiTestControl.vue';
+
 </script>
 
 <template>
   <main>
-    <h1>This is a control page</h1>
+    <ApiTestControl/>
   </main>
 </template>

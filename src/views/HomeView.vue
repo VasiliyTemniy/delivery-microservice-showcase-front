@@ -3,11 +3,13 @@
 
 <template>
   <main>
-    <h1>This is a home page</h1>
-    <p>
+    <h1 class="p-1 text-lg font-bold">
+      Имитатор фронтенда для delivery-microservice
+    </h1>
+    <p class="p-1 text-lg">
       Описание страниц:
     </p>
-    <ul>
+    <ul class="p-1 text-lg">
       <li>
         Контроль - страница для создания и удаления тестовых данных на backend
       </li>

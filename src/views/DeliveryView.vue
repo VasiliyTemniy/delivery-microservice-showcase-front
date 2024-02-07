@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import DeliveryMeta from '@/components/DeliveryMeta.vue';
 </script>
 
 <template>
   <main>
-    <h1>This is a delivery page</h1>
+    <DeliveryMeta/>
   </main>
 </template>

@@ -6,7 +6,7 @@ import { AxiosError } from 'axios';
 
 export const useDeliveryMetaStore = defineStore('deliveryMeta', () => {
 
-  const deliveryMeta = ref<DeliveryMeta>();
+  const deliveryMeta = ref<DeliveryMeta>({ cost: 0, estimatedDeliveryMs: 0n });
 
   const getDeliveryMeta = computed(() => deliveryMeta.value);
 
