@@ -11,8 +11,8 @@ import { RouterLink } from 'vue-router';
       <RouterLink to="/" class="p-1 text-gray-700 dark:text-gray-300 transition ease-in-out duration-300 delay-150 hover:text-gray-900 hover:bg-green-300 hover:bg-opacity-30 hover:shadow-inner">
         <LogoIcon />
       </RouterLink>
-      <RouterLink to="/dashboard" class="p-1 text-gray-700 dark:text-gray-300 transition ease-in-out duration-300 delay-150 hover:text-gray-900 hover:bg-green-300 hover:bg-opacity-30 hover:shadow-inner">
-        Дашборд
+      <RouterLink to="/control" class="p-1 text-gray-700 dark:text-gray-300 transition ease-in-out duration-300 delay-150 hover:text-gray-900 hover:bg-green-300 hover:bg-opacity-30 hover:shadow-inner">
+        Контроль
       </RouterLink>
       <RouterLink to="/tracking" class="p-1 text-gray-700 dark:text-gray-300 transition ease-in-out duration-300 delay-150 hover:text-gray-900 hover:bg-green-300 hover:bg-opacity-30 hover:shadow-inner">
         Отслеживание
